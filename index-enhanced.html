@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoCam Australia | AI-Native Reality Capture Platform</title>
+    <meta name="description" content="The first AI-Native Reality Capture Platform. Aerial, Street, Indoors. Enterprise ready mapping at any scale for Australian infrastructure.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .page-section { display: none; }
+        .page-section.active { display: block; opacity: 1; animation: fadeIn 0.4s ease-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .nav-link.active { color: #2563eb !important; border-bottom: 2px solid #2563eb; }
+    </style>
+</head>
+<body class="bg-white text-slate-900 antialiased min-h-screen">
+
+    <!-- COMPLIANCE BAR -->
+    <div class="bg-slate-950 text-white text-[10px] font-black uppercase tracking-[0.3em] py-2.5 px-6 flex justify-between items-center border-b border-white/10">
+        <div class="flex items-center gap-6">
+            <span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full animate-pulse"></span> GCA-SYSTEMS-V1</span>
+            <span class="hidden md:block">ISO 9001 FRAMEWORK READY</span>
+        </div>
+        <div>ABN: 78 166 182 227</div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3 cursor-pointer" onclick="navigateTo('home')">
+                <div class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-blue-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-white"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-xl font-black italic tracking-tighter">GEOCAM</span>
+                    <span class="text-[10px] font-bold text-blue-600 tracking-[0.2em] uppercase">AUSTRALIA</span>
+                </div>
+            </div>
+            
+            <div id="nav-links" class="hidden lg:flex items-center gap-8 text-[11px] font-black uppercase tracking-[0.15em] text-slate-400">
+                <button data-nav="home" onclick="navigateTo('home')" class="nav-link transition-colors py-2 hover:text-slate-900">Home</button>
+                <button data-nav="product" onclick="navigateTo('product')" class="nav-link transition-colors py-2 hover:text-slate-900">Product</button>
+                <button data-nav="data" onclick="navigateTo('data')" class="nav-link transition-colors py-2 hover:text-slate-900">Data</button>
+                <button data-nav="subscription" onclick="navigateTo('subscription')" class="nav-link transition-colors py-2 hover:text-slate-900">Subscription</button>
+                <button data-nav="about" onclick="navigateTo('about')" class="nav-link transition-colors py-2 hover:text-slate-900">About</button>
+                <button onclick="navigateTo('contact')" class="bg-slate-900 text-white px-6 py-3 rounded-full hover:bg-blue-600 transition-all">Contact</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTENT SECTIONS -->
+    <main>
+        <!-- HOME -->
+        <section id="home" class="page-section active">
+            <!-- Hero -->
+            <div class="bg-gradient-to-b from-slate-50 to-white">
+                <div class="max-w-7xl mx-auto px-6 py-24 lg:py-32 text-center">
+                    <div class="inline-flex items-center gap-2 bg-blue-50 text-blue-700 px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-widest mb-8 border border-blue-100">
+                        The first AI-Native Reality Capture Platform
+                    </div>
+                    <h1 class="text-5xl lg:text-7xl font-black tracking-tight leading-tight mb-6">
+                        The first AI-Native<br>
+                        <span class="text-blue-600">Reality Capture Platform</span>
+                    </h1>
+                    <p class="text-2xl lg:text-3xl text-slate-600 font-semibold mb-12">
+                        Aerial, Street, Indoors
+                    </p>
+                    <div class="max-w-3xl mx-auto mb-16">
+                        <h2 class="text-xl lg:text-2xl font-bold mb-4">GeoCam is the enterprise ready Reality Capture Platform.</h2>
+                        <p class="text-lg text-slate-600">Our AI-powered Visual Positioning Engine enables rapid mapping at any scale, no LiDAR.</p>
+                    </div>
+                    
+                    <!-- Hero Image Placeholder -->
+                    <div class="relative bg-slate-100 aspect-video max-w-5xl mx-auto rounded-3xl border border-slate-200 flex items-center justify-center text-slate-300 font-bold italic mb-24">
+                        [ HERO IMAGE - Platform Screenshot ]
+                    </div>
+                </div>
+            </div>
+
+            <!-- Manage / Process / Create Workflow -->
+            <div class="py-24 px-6">
+                <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="bg-slate-100 aspect-video rounded-2xl mb-6 flex items-center justify-center text-slate-400 font-bold">
+                            [ Manage Image ]
+                        </div>
+                        <h3 class="text-3xl font-black mb-4">Manage</h3>
+                        <p class="text-slate-600">Upload, organize and process your reality capture data in one centralized platform.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-slate-100 aspect-video rounded-2xl mb-6 flex items-center justify-center text-slate-400 font-bold">
+                            [ Process Image ]
+                        </div>
+                        <h3 class="text-3xl font-black mb-4">Process</h3>
+                        <p class="text-slate-600">AI-powered Visual Positioning Engine automatically aligns and processes imagery.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-slate-100 aspect-video rounded-2xl mb-6 flex items-center justify-center text-slate-400 font-bold">
+                            [ Create Image ]
+                        </div>
+                        <h3 class="text-3xl font-black mb-4">Create</h3>
+                        <p class="text-slate-600">Extract features and create accurate GIS data compliant with Australian standards.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Deploy on Any Platform -->
+            <div class="bg-slate-50 py-24 px-6">
+                <div class="max-w-7xl mx-auto text-center mb-16">
+                    <h2 class="text-4xl lg:text-5xl font-black mb-6">Deploy on any platform, anywhere.</h2>
+                    <p class="text-xl text-slate-600">Easy to transition between them and fuse into a single scene.</p>
+                </div>
+                
+                <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-3xl border border-slate-200">
+                        <div class="bg-slate-100 aspect-square rounded-2xl mb-6 flex items-center justify-center text-slate-400 font-bold">
+                            [ Vehicle Camera ]
+                        </div>
+                        <h3 class="text-2xl font-black mb-4">Drive Streets</h3>
+                        <p class="text-slate-600">Mobile mapping for roads, utilities, and streetscapes with centimetre-level accuracy.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl border border-slate-200">
+                        <div class="bg-slate-100 aspect-square rounded-2xl mb-6 flex items-center justify-center text-slate-400 font-bold">
+                            [ Backpack Camera ]
+                        </div>
+                        <h3 class="text-2xl font-black mb-4">Walk Properties and Indoors</h3>
+                        <p class="text-slate-600">Portable capture for facilities, campuses, and areas inaccessible to vehicles.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl border border-slate-200">
+                        <div class="bg-slate-100 aspect-square rounded-2xl mb-6 flex items-center justify-center text-slate-400 font-bold">
+                            [ Drone Image ]
+                        </div>
+                        <h3 class="text-2xl font-black mb-4">Capture Aerial Imagery</h3>
+                        <p class="text-slate-600">Drone integration for large-scale projects and terrain mapping.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Industry Applications -->
+            <div class="py-24 px-6">
+                <div class="max-w-7xl mx-auto text-center mb-16">
+                    <h2 class="text-4xl lg:text-5xl font-black mb-6">Build map data in support of many industries.</h2>
+                </div>
+                
+                <div class="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="p-8 border border-slate-200 rounded-2xl hover:border-blue-600 transition-all">
+                        <h4 class="text-xl font-black mb-3">Public Works Asset Management</h4>
+                        <p class="text-sm text-slate-600">Map and maintain critical street furniture, roadways, assets in parks or along trails, and sidewalks.</p>
+                    </div>
+                    <div class="p-8 border border-slate-200 rounded-2xl hover:border-blue-600 transition-all">
+                        <h4 class="text-xl font-black mb-3">Utilities Electric, Fiber, Water, and Gas</h4>
+                        <p class="text-sm text-slate-600">Build Utility Network data from the ground up, faster and more accurately than converting old data.</p>
+                    </div>
+                    <div class="p-8 border border-slate-200 rounded-2xl hover:border-blue-600 transition-all">
+                        <h4 class="text-xl font-black mb-3">Public Safety Pre Plans and Maps</h4>
+                        <p class="text-sm text-slate-600">Expand Inspections creating Fire, Police, and Ambulance Services ready Pre Plan Maps.</p>
+                    </div>
+                    <div class="p-8 border border-slate-200 rounded-2xl hover:border-blue-600 transition-all">
+                        <h4 class="text-xl font-black mb-3">Facilities and Property Assessments</h4>
+                        <p class="text-sm text-slate-600">No more paper reports and inventories without locations! Create PCA and FCA data using maps.</p>
+                    </div>
+                    <div class="p-8 border border-slate-200 rounded-2xl hover:border-blue-600 transition-all">
+                        <h4 class="text-xl font-black mb-3">Construction As Built Models</h4>
+                        <p class="text-sm text-slate-600">Continually scan the build process enabling "True As Builds" updating designs and creating a super vision.</p>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-12">
+                    <button onclick="navigateTo('product')" class="bg-blue-600 text-white px-8 py-4 rounded-2xl font-black uppercase text-xs tracking-widest hover:shadow-xl transition-all">Learn More About the GeoCam Product</button>
+                </div>
+            </div>
+
+            <!-- Events Section -->
+            <div class="bg-slate-50 py-24 px-6">
+                <div class="max-w-7xl mx-auto">
+                    <h2 class="text-4xl font-black mb-12 text-center">Upcoming Events</h2>
+                    <!-- NOTION AUTOMATION MARKER: Events pulled from Notion database -->
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="bg-white p-8 rounded-3xl border border-slate-200">
+                            <h3 class="text-2xl font-black mb-2">DistribuTECH 2026</h3>
+                            <p class="text-sm font-bold text-blue-600 mb-4">February 2-5, 2026 - San Diego</p>
+                            <p class="text-sm text-slate-600 mb-6">As utilities face increasing pressure to maintain aging assets, respond to extreme weather, and document field conditions with greater accuracy and speed, GeoCam's reality capture and automated data management solutions help bridge the gap between field operations and enterprise decision-making.</p>
+                            <button onclick="navigateTo('contact')" class="text-sm font-bold text-blue-600 hover:underline">Let's Connect →</button>
+                        </div>
+                        <div class="bg-white p-8 rounded-3xl border border-slate-200">
+                            <h3 class="text-2xl font-black mb-2">Esri FedGIS 2026</h3>
+                            <p class="text-sm font-bold text-blue-600 mb-4">February 10-11, 2026 - Washington</p>
+                            <p class="text-sm text-slate-600 mb-6">As federal agencies increasingly rely on geospatial intelligence to inform planning, compliance, and operational readiness, GeoCam's reality capture and automated imagery management solutions help transform field data into actionable insights.</p>
+                            <button onclick="navigateTo('contact')" class="text-sm font-bold text-blue-600 hover:underline">Let's Connect →</button>
+                        </div>
+                        <div class="bg-white p-8 rounded-3xl border border-slate-200">
+                            <h3 class="text-2xl font-black mb-2">GeoWeek 2026</h3>
+                            <p class="text-sm font-bold text-blue-600 mb-4">February 16-18, 2026 - Denver</p>
+                            <p class="text-sm text-slate-600 mb-6">As organizations seek faster, more scalable ways to capture, manage, and operationalize visual data from the field, GeoCam brings a practical, mobile-first approach to reality capture that complements LiDAR, photogrammetry, and GIS workflows.</p>
+                            <button onclick="navigateTo('contact')" class="text-sm font-bold text-blue-600 hover:underline">Let's Connect →</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="py-24 px-6">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="text-3xl font-black mb-6">Newsletter - keep up with all the amazing developments we have coming up.</h2>
+                    <!-- NOTION AUTOMATION MARKER: Form submits to Notion database -->
+                    <form onsubmit="handleNewsletterSubmit(event)" class="flex flex-col md:flex-row gap-4">
+                        <input type="email" placeholder="Email Address" required class="flex-1 px-6 py-4 rounded-xl border border-slate-300 outline-none focus:border-blue-600 transition-all">
+                        <button class="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-700 transition-all">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRODUCT -->
+        <section id="product" class="page-section py-24 px-6 bg-slate-50">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-xs font-black text-blue-600 uppercase tracking-[0.4em] mb-4">The Platform</h2>
+                <h3 class="text-5xl font-black tracking-tighter uppercase italic mb-16">Hardware & Software.</h3>
+                
+                <!-- Hardware Section -->
+                <div class="bg-white p-12 rounded-[3rem] border border-slate-200 mb-8 grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="bg-slate-100 aspect-square rounded-3xl flex items-center justify-center font-bold text-slate-300 italic">
+                        [ GeoCam 360 Camera Image ]
+                    </div>
+                    <div>
+                        <span class="text-xs font-black text-blue-600 uppercase tracking-widest">Hardware</span>
+                        <h4 class="text-3xl font-black mt-2 mb-4 uppercase">GeoCam 360 Camera</h4>
+                        <p class="text-slate-600 mb-6">36MP Visual Sensor with RTK GNSS accuracy. Built for Australian heat and dust conditions. GDA2020 compliant positioning.</p>
+                        <div class="grid grid-cols-2 gap-4 text-[10px] font-black uppercase tracking-widest">
+                            <div class="p-3 bg-slate-50 rounded-lg border border-slate-100">Vehicle Mount</div>
+                            <div class="p-3 bg-slate-50 rounded-lg border border-slate-100">Backpack</div>
+                            <div class="p-3 bg-slate-50 rounded-lg border border-slate-100">Monopole</div>
+                            <div class="p-3 bg-slate-50 rounded-lg border border-slate-100">Indoor</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Software Components -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white p-8 rounded-3xl border border-slate-200">
+                        <h5 class="font-black uppercase mb-2">Manager</h5>
+                        <p class="text-xs text-slate-500">Project management and processing dashboard. Upload, organize, and monitor capture sessions.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl border border-slate-200">
+                        <h5 class="font-black uppercase mb-2">Editor</h5>
+                        <h5 class="font-black uppercase mb-2 text-blue-600 text-[10px]">ArcGIS Integration</h5>
+                        <p class="text-xs text-slate-500">Cloud-based feature extraction and editing. Direct integration with Esri workflows.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl border border-slate-200">
+                        <h5 class="font-black uppercase mb-2">Viewer</h5>
+                        <p class="text-xs text-slate-500">Stakeholder visualisation and feature search. Share immersive 360° views with clients.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl border border-slate-200">
+                        <h5 class="font-black uppercase mb-2">QAQC</h5>
+                        <p class="text-xs text-slate-500">Rigorous quality assurance for GIS data. Automated validation against Australian standards.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DATA -->
+        <section id="data" class="page-section py-24 px-6 bg-white">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-xs font-black text-blue-600 uppercase tracking-[0.4em] mb-4">Data Services</h2>
+                <h3 class="text-5xl font-black tracking-tighter uppercase italic mb-16">Visual Intelligence.</h3>
+                
+                <div class="grid lg:grid-cols-2 gap-8">
+                    <div class="bg-slate-50 p-12 rounded-3xl border border-slate-200">
+                        <span class="text-xs font-black text-blue-600 uppercase tracking-widest">Reality Capture</span>
+                        <h4 class="text-3xl font-black mt-2 mb-4 uppercase">Imagery as a Service</h4>
+                        <p class="text-slate-600 mb-6">Complete reality capture including 3D Meshes and Point Clouds optimized for Australian standards and coordinate systems.</p>
+                        <div class="inline-block px-4 py-2 bg-blue-50 text-blue-700 rounded-full text-[10px] font-black uppercase">GDA2020 Compliant</div>
+                    </div>
+                    
+                    <div class="bg-slate-900 text-white p-12 rounded-3xl">
+                        <span class="text-xs font-black text-blue-400 uppercase tracking-widest">Map Production</span>
+                        <h4 class="text-3xl font-black mt-2 mb-4 uppercase">CAD & GIS Data</h4>
+                        <p class="text-slate-400 mb-6">Turning raw imagery into precise vector data for Councils, Utilities, and Construction projects. Australian asset classification standards.</p>
+                        <div class="inline-block px-4 py-2 bg-white/10 text-white/70 rounded-full text-[10px] font-black uppercase">Feature Extraction Engine</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SUBSCRIPTION -->
+        <section id="subscription" class="page-section py-24 px-6 bg-slate-50">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-xs font-black text-blue-600 uppercase tracking-[0.4em] mb-4">Commercials</h2>
+                <h3 class="text-5xl font-black tracking-tighter uppercase italic mb-12">Subscription Hub.</h3>
+                
+                <div class="grid md:grid-cols-3 gap-6 text-left mb-12">
+                    <div class="p-6 border border-slate-200 rounded-2xl bg-white">
+                        <h5 class="font-black text-[10px] uppercase text-slate-400 mb-4">Deployment</h5>
+                        <div class="font-bold text-lg mb-2">Camera Term</div>
+                        <div class="text-sm text-slate-500">Flexible rental periods</div>
+                        <div class="text-xs text-slate-400 mt-4">1 Month / 1 Year / 3 Year</div>
+                    </div>
+                    <div class="p-6 border-2 border-blue-600 rounded-2xl bg-slate-900 text-white">
+                        <h5 class="font-black text-[10px] uppercase text-slate-500 mb-4">Usage</h5>
+                        <div class="font-bold text-lg mb-2">VPS Credits</div>
+                        <div class="text-sm text-slate-400">Pay per kilometre captured</div>
+                        <div class="text-xs text-slate-500 mt-4">Visual Positioning System</div>
+                    </div>
+                    <div class="p-6 border border-slate-200 rounded-2xl bg-white">
+                        <h5 class="font-black text-[10px] uppercase text-slate-400 mb-4">Access</h5>
+                        <div class="font-bold text-lg mb-2">User Licenses</div>
+                        <div class="text-sm text-slate-500">Role-based permissions</div>
+                        <div class="text-xs text-slate-400 mt-4">Admin / Editor / Viewer</div>
+                    </div>
+                </div>
+                
+                <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-8">All pricing is in AUD (ex-GST).</p>
+                <button onclick="navigateTo('contact')" class="bg-blue-600 text-white px-8 py-4 rounded-2xl font-black uppercase text-xs tracking-widest hover:shadow-xl transition-all">Request Pricing</button>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="page-section py-24 px-6 bg-white">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-xs font-black text-blue-600 uppercase tracking-[0.4em] mb-4">About</h2>
+                <h3 class="text-5xl font-black tracking-tighter mb-8">Geocam Australia</h3>
+                
+                <div class="prose prose-lg max-w-none">
+                    <p class="text-xl text-slate-600 mb-8">Official Australian distributor of GeoCam hardware and exclusive Data-as-a-Service provider for the region.</p>
+                    
+                    <h4 class="text-2xl font-black mt-12 mb-4">Our Mission</h4>
+                    <p class="text-slate-600">To bring world-class reality capture technology to Australian infrastructure, utilities, and government sectors. We combine GeoCam's cutting-edge AI-powered platform with deep local knowledge of Australian standards, regulations, and unique operating conditions.</p>
+                    
+                    <h4 class="text-2xl font-black mt-12 mb-4">Australian Standards Compliance</h4>
+                    <div class="grid md:grid-cols-2 gap-6 my-8">
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200">
+                            <h5 class="font-black mb-2">GDA2020</h5>
+                            <p class="text-sm text-slate-600">All positioning data compliant with Geocentric Datum of Australia 2020</p>
+                        </div>
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200">
+                            <h5 class="font-black mb-2">ISO 9001 Ready</h5>
+                            <p class="text-sm text-slate-600">Quality management systems framework for enterprise deployments</p>
+                        </div>
+                    </div>
+                    
+                    <h4 class="text-2xl font-black mt-12 mb-4">Global Network</h4>
+                    <div class="grid md:grid-cols-2 gap-8 my-8">
+                        <div>
+                            <h5 class="font-bold text-slate-900 mb-2">Australia HQ</h5>
+                            <p class="text-slate-600">North Sydney, NSW<br>Serving all Australian states and territories</p>
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-slate-900 mb-2">Global HQ</h5>
+                            <p class="text-slate-600">San Francisco, USA<br>GeoCam technology development centre</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="page-section py-24 px-6 bg-slate-50">
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-16">
+                    <div>
+                        <h3 class="text-4xl font-black uppercase italic tracking-tighter mb-8">Connect.</h3>
+                        <p class="text-slate-600 mb-10">Our enquiry portal is integrated with GCA-CRM for immediate technical review.</p>
+                        <div class="text-sm font-bold text-slate-600 space-y-4">
+                            <div><span class="text-slate-900 font-black">Australia HQ:</span> North Sydney, NSW</div>
+                            <div><span class="text-slate-900 font-black">Global HQ:</span> San Francisco, USA</div>
+                            <div class="text-blue-600"><a href="mailto:info@geocamaustralia.com.au">info@geocamaustralia.com.au</a></div>
+                        </div>
+                    </div>
+                    <!-- NOTION AUTOMATION MARKER: Form submits to Notion database -->
+                    <form onsubmit="handleContactSubmit(event)" class="space-y-4">
+                        <input type="text" name="name" placeholder="Name" required class="w-full p-4 rounded-xl border border-slate-200 outline-none focus:border-blue-600 transition-all text-sm font-bold">
+                        <input type="email" name="email" placeholder="Email" required class="w-full p-4 rounded-xl border border-slate-200 outline-none focus:border-blue-600 transition-all text-sm font-bold">
+                        <input type="text" name="organization" placeholder="Organization" class="w-full p-4 rounded-xl border border-slate-200 outline-none focus:border-blue-600 transition-all text-sm font-bold">
+                        <textarea name="message" placeholder="Brief requirement..." required class="w-full p-4 rounded-xl border border-slate-200 outline-none focus:border-blue-600 transition-all text-sm font-bold h-32"></textarea>
+                        <button type="submit" class="w-full bg-slate-900 text-white font-black py-4 rounded-xl uppercase tracking-widest text-xs hover:bg-blue-600 transition-all">Initialize Entry</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="py-12 px-6 border-t border-slate-200 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-8">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-white"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-xl font-black italic tracking-tighter">GEOCAM</span>
+                        <span class="text-[10px] font-bold text-blue-600 tracking-[0.2em] uppercase">AUSTRALIA</span>
+                    </div>
+                </div>
+                
+                <div class="flex flex-wrap gap-6 text-[10px] font-black uppercase tracking-widest text-slate-400">
+                    <button onclick="navigateTo('home')" class="hover:text-slate-900">Home</button>
+                    <button onclick="navigateTo('product')" class="hover:text-slate-900">Product</button>
+                    <button onclick="navigateTo('data')" class="hover:text-slate-900">Data</button>
+                    <button onclick="navigateTo('subscription')" class="hover:text-slate-900">Subscription</button>
+                    <button onclick="navigateTo('about')" class="hover:text-slate-900">About</button>
+                    <button onclick="navigateTo('contact')" class="hover:text-slate-900">Contact</button>
+                </div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 pt-8 border-t border-slate-200">
+                <div class="text-[10px] font-black uppercase tracking-widest text-slate-400">© 2025 Geocam Australia Pty Ltd</div>
+                <div class="text-[10px] font-black uppercase tracking-widest text-slate-400">ABN: 78 166 182 227</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script>
+        // Navigation Handler
+        function navigateTo(sectionId) {
+            window.location.hash = sectionId;
+            const sections = document.querySelectorAll('.page-section');
+            sections.forEach(s => s.classList.remove('active'));
+            
+            const target = document.getElementById(sectionId);
+            if (target) {
+                target.classList.add('active');
+            } else {
+                document.getElementById('home').classList.add('active');
+            }
+            
+            const links = document.querySelectorAll('.nav-link');
+            links.forEach(l => {
+                l.classList.remove('active');
+                if (l.getAttribute('data-nav') === sectionId) {
+                    l.classList.add('active');
+                }
+            });
+            
+            window.scrollTo(0, 0);
+        }
+
+        // Initialize on load
+        function init() {
+            const hash = window.location.hash.replace('#', '');
+            if (hash) {
+                navigateTo(hash);
+            }
+        }
+
+        // Handle browser back/forward
+        window.addEventListener('hashchange', function() {
+            const hash = window.location.hash.replace('#', '');
+            if (hash) {
+                navigateTo(hash);
+            }
+        });
+
+        // Form Handlers - Ready for Notion Integration
+        function handleContactSubmit(event) {
+            event.preventDefault();
+            
+            // TODO: Send to Notion via API or Make.com/Zapier webhook
+            const formData = {
+                name: event.target.name.value,
+                email: event.target.email.value,
+                organization: event.target.organization.value || 'Not provided',
+                message: event.target.message.value,
+                timestamp: new Date().toISOString(),
+                source: 'Website Contact Form'
+            };
+            
+            console.log('Contact Form Submitted:', formData);
+            
+            // Temporary confirmation
+            alert('Thank you! Your enquiry has been received. Our team will contact you within 24 hours.');
+            event.target.reset();
+            
+            // When ready to integrate with Notion:
+            // fetch('YOUR_NOTION_API_ENDPOINT', {
+            //     method: 'POST',
+            //     headers: { 'Content-Type': 'application/json' },
+            //     body: JSON.stringify(formData)
+            // });
+        }
+
+        function handleNewsletterSubmit(event) {
+            event.preventDefault();
+            
+            // TODO: Send to Notion via API or Make.com/Zapier webhook
+            const email = event.target.querySelector('input[type="email"]').value;
+            
+            console.log('Newsletter Signup:', email);
+            
+            // Temporary confirmation
+            alert('Thank you for subscribing!');
+            event.target.reset();
+        }
+
+        // Initialize
+        window.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>
