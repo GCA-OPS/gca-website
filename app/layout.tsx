@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   title: 'GeoCam Australia | AI-Native Reality Capture Platform',
   description:
     'The first AI-Native Reality Capture Platform. Aerial, Street, Indoors. Enterprise ready mapping at any scale for Australian infrastructure.',
+  icons: {
+    icon: '/favicon.png',
+  },
 }
 
 export default function RootLayout({
