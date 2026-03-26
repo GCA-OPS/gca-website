@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
@@ -11,26 +12,36 @@ const dataTypes = [
     sector: 'Public Safety',
     title: 'Fire and Police Pre Plans',
     body: 'Floor plans, critical assets, access points, and hydrant locations for Fire, Police, and Ambulance Services.',
+    image: '/images/geocam-xyz/FloorPlan_Assets.png',
+    imageAlt: 'Floor plan with critical assets and access points mapped with GeoCam',
   },
   {
     sector: 'Telecommunications',
     title: 'Fiber Network Assets',
     body: 'Poles, attachments, connectivity, strand counts, and more. Complete OSP asset capture from vehicle or backpack.',
+    image: '/images/geocam-xyz/Fiber.png',
+    imageAlt: 'Fiber network assets captured with GeoCam',
   },
   {
     sector: 'Electric Utilities',
     title: 'Distribution Network Assets',
     body: 'Structures, devices, structure junctions, electric line and sub-networks. Compliant with ArcGIS Utility Network.',
+    image: '/images/geocam-xyz/UN.png',
+    imageAlt: 'Electric utility distribution network mapped with GeoCam',
   },
   {
     sector: 'Facilities',
     title: 'Indoor Facilities Management',
     body: 'Architectural floor plans and asset locations captured via backpack. Ideal for campuses, hospitals, and government buildings.',
+    image: '/images/geocam-xyz/image_2021-12-05_09-33-36.png',
+    imageAlt: 'Indoor facility capture with GeoCam backpack unit',
   },
   {
     sector: 'Public Works',
     title: 'Street and Road Assets',
     body: 'Signs by type, poles, signals, streetlights, storm water infrastructure. Condition assessment ready.',
+    image: '/images/geocam-xyz/Signs.png',
+    imageAlt: 'Road signs and street assets captured with GeoCam',
   },
 ]
 
@@ -54,39 +65,59 @@ export default function DataPage() {
       <section className="py-24 px-6">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-8">
           {/* Imagery as a Service */}
-          <div className="bg-slate-50 p-12 rounded-3xl border border-slate-200">
-            <span className="text-xs font-black text-blue-600 uppercase tracking-widest">3.1 Reality Capture</span>
-            <h2 className="text-3xl font-black mt-2 mb-4 uppercase">Imagery as a Service</h2>
-            <p className="text-slate-600 leading-relaxed mb-6">
-              Complete reality capture delivered as a managed service. Includes 3D Textured Meshes, Point Clouds, and Orthorenders — all optimised for Australian coordinate systems and standards.
-            </p>
-            <div className="flex flex-wrap gap-3">
-              <span className="px-4 py-2 bg-blue-50 text-blue-700 rounded-full text-[10px] font-black uppercase tracking-widest border border-blue-100">
-                GDA2020 Compliant
-              </span>
-              <span className="px-4 py-2 bg-blue-50 text-blue-700 rounded-full text-[10px] font-black uppercase tracking-widest border border-blue-100">
-                3D Mesh Export
-              </span>
-              <span className="px-4 py-2 bg-blue-50 text-blue-700 rounded-full text-[10px] font-black uppercase tracking-widest border border-blue-100">
-                Point Cloud
-              </span>
+          <div className="bg-slate-50 rounded-3xl border border-slate-200 overflow-hidden">
+            <div className="relative aspect-video w-full">
+              <Image
+                src="/images/geocam-xyz/photo_2024-02-06_09-25-37.jpg"
+                alt="Reality capture in the field with GeoCam"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="p-12">
+              <span className="text-xs font-black text-blue-600 uppercase tracking-widest">3.1 Reality Capture</span>
+              <h2 className="text-3xl font-black mt-2 mb-4 uppercase">Imagery as a Service</h2>
+              <p className="text-slate-600 leading-relaxed mb-6">
+                Complete reality capture delivered as a managed service. Includes 3D Textured Meshes, Point Clouds, and Orthorenders — all optimised for Australian coordinate systems and standards.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <span className="px-4 py-2 bg-blue-50 text-blue-700 rounded-full text-[10px] font-black uppercase tracking-widest border border-blue-100">
+                  GDA2020 Compliant
+                </span>
+                <span className="px-4 py-2 bg-blue-50 text-blue-700 rounded-full text-[10px] font-black uppercase tracking-widest border border-blue-100">
+                  3D Mesh Export
+                </span>
+                <span className="px-4 py-2 bg-blue-50 text-blue-700 rounded-full text-[10px] font-black uppercase tracking-widest border border-blue-100">
+                  Point Cloud
+                </span>
+              </div>
             </div>
           </div>
 
           {/* CAD & GIS Data */}
-          <div className="bg-slate-900 text-white p-12 rounded-3xl">
-            <span className="text-xs font-black text-blue-400 uppercase tracking-widest">3.2 Map Production</span>
-            <h2 className="text-3xl font-black mt-2 mb-4 uppercase">CAD &amp; GIS Data</h2>
-            <p className="text-slate-400 leading-relaxed mb-6">
-              We offer data services — custom Map and CAD data production at almost any Level of Detail (LOD). Turning raw imagery into precise vector data for Councils, Utilities, and Construction projects.
-            </p>
-            <div className="flex flex-wrap gap-3">
-              <span className="px-4 py-2 bg-white/10 text-white/70 rounded-full text-[10px] font-black uppercase tracking-widest">
-                Feature Extraction Engine
-              </span>
-              <span className="px-4 py-2 bg-white/10 text-white/70 rounded-full text-[10px] font-black uppercase tracking-widest">
-                Any LOD
-              </span>
+          <div className="bg-slate-900 text-white rounded-3xl overflow-hidden">
+            <div className="relative aspect-video w-full">
+              <Image
+                src="/images/geocam-xyz/GeoCam_Imagery_Symbols_Boise.jpg"
+                alt="GIS feature extraction and symbol mapping with GeoCam"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="p-12">
+              <span className="text-xs font-black text-blue-400 uppercase tracking-widest">3.2 Map Production</span>
+              <h2 className="text-3xl font-black mt-2 mb-4 uppercase">CAD &amp; GIS Data</h2>
+              <p className="text-slate-400 leading-relaxed mb-6">
+                We offer data services — custom Map and CAD data production at almost any Level of Detail (LOD). Turning raw imagery into precise vector data for Councils, Utilities, and Construction projects.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <span className="px-4 py-2 bg-white/10 text-white/70 rounded-full text-[10px] font-black uppercase tracking-widest">
+                  Feature Extraction Engine
+                </span>
+                <span className="px-4 py-2 bg-white/10 text-white/70 rounded-full text-[10px] font-black uppercase tracking-widest">
+                  Any LOD
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -113,8 +144,13 @@ export default function DataPage() {
               See the Editor
             </Link>
           </div>
-          <div className="bg-white aspect-video rounded-3xl border border-slate-200 flex items-center justify-center text-slate-300 font-bold italic">
-            [ GeoCam Editor screenshot ]
+          <div className="relative aspect-video rounded-3xl overflow-hidden border border-slate-200 shadow-sm">
+            <Image
+              src="/images/geocam-xyz/Screenshot 2024-07-09 205153.png"
+              alt="GeoCam Editor — single-click feature creation from 360° imagery"
+              fill
+              className="object-cover"
+            />
           </div>
         </div>
       </section>
@@ -127,11 +163,16 @@ export default function DataPage() {
             <h2 className="text-4xl font-black tracking-tight">What we map.</h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {dataTypes.map(({ sector, title, body }) => (
-              <div key={title} className="p-8 border border-slate-200 rounded-2xl hover:border-blue-600 hover:shadow-md transition-all group">
-                <p className="text-[10px] font-black text-blue-600 uppercase tracking-widest mb-3">{sector}</p>
-                <h3 className="text-lg font-black mb-3">{title}</h3>
-                <p className="text-sm text-slate-500 leading-relaxed">{body}</p>
+            {dataTypes.map(({ sector, title, body, image, imageAlt }) => (
+              <div key={title} className="border border-slate-200 rounded-2xl hover:border-blue-600 hover:shadow-md transition-all overflow-hidden">
+                <div className="relative aspect-video w-full">
+                  <Image src={image} alt={imageAlt} fill className="object-cover" />
+                </div>
+                <div className="p-8">
+                  <p className="text-[10px] font-black text-blue-600 uppercase tracking-widest mb-3">{sector}</p>
+                  <h3 className="text-lg font-black mb-3">{title}</h3>
+                  <p className="text-sm text-slate-500 leading-relaxed">{body}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -141,8 +182,13 @@ export default function DataPage() {
       {/* ── 3D EXPORTS ── */}
       <section className="bg-slate-950 text-white py-24 px-6">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
-          <div className="bg-white/5 aspect-video rounded-3xl border border-white/10 flex items-center justify-center text-white/20 font-bold italic">
-            [ 3D Textured Mesh example ]
+          <div className="relative aspect-video rounded-3xl overflow-hidden">
+            <Image
+              src="/images/geocam-xyz/cadbury_CAD.png"
+              alt="3D CAD data output from GeoCam platform"
+              fill
+              className="object-cover"
+            />
           </div>
           <div>
             <p className="text-xs font-black text-blue-400 uppercase tracking-[0.4em] mb-4">3D Outputs</p>

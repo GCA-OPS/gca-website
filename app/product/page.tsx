@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
@@ -24,6 +25,8 @@ const apps = [
     tagline: 'Create and Manage Reality Capture Projects',
     body: 'Organisational setup, project management, data management, processing capabilities, and workflow configuration — all in one cloud dashboard.',
     badge: null,
+    image: '/images/geocam-xyz/Untitled (4).png',
+    imageAlt: 'GeoCam Manager — project management dashboard',
   },
   {
     id: '2.3',
@@ -31,6 +34,8 @@ const apps = [
     tagline: 'Effortless Map Data Creation, Single Click in Images',
     body: 'Web streaming, direct ArcGIS Feature Service integration, rapid data creation, accuracy refinement, and smart symbol selection.',
     badge: 'ArcGIS Integration',
+    image: '/images/geocam-xyz/Untitled (6).png',
+    imageAlt: 'GeoCam Editor — feature creation from 360° imagery',
   },
   {
     id: '2.4',
@@ -38,6 +43,8 @@ const apps = [
     tagline: 'Efficient Quality Assurance for Map Data',
     body: 'Rapid review, enhanced efficiency, accuracy checks, and quick correction tools. Automated validation against Australian standards.',
     badge: null,
+    image: '/images/geocam-xyz/Untitled (12).png',
+    imageAlt: 'GeoCam QAQC — quality assurance interface',
   },
   {
     id: '2.5',
@@ -45,6 +52,8 @@ const apps = [
     tagline: 'Simplify Your Imagery and GIS Data Interaction',
     body: 'Precise navigation, feature search, Lock View tool, and collaboration features. Share immersive 360° views with clients and stakeholders.',
     badge: null,
+    image: '/images/geocam-xyz/Picture6.png',
+    imageAlt: 'GeoCam Viewer — imagery and GIS data exploration',
   },
   {
     id: '2.6',
@@ -52,6 +61,8 @@ const apps = [
     tagline: 'Protect Privacy with Machine Learning',
     body: 'Automatically blur vehicles and people across all captured imagery. Comprehensive coverage, flexible deployment, and customisable solutions.',
     badge: 'ML Powered',
+    image: '/images/geocam-xyz/Pii image.png',
+    imageAlt: 'GeoCam PII — ML-powered privacy blurring of vehicles and people',
   },
 ]
 
@@ -75,9 +86,14 @@ export default function ProductPage() {
       <section className="py-24 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="bg-white rounded-[3rem] border border-slate-200 p-12 grid lg:grid-cols-2 gap-16 items-center">
-            {/* Image placeholder */}
-            <div className="bg-slate-100 aspect-square rounded-3xl flex items-center justify-center text-slate-300 font-bold italic">
-              [ GeoCam 360 Camera product image ]
+            <div className="relative aspect-square rounded-3xl overflow-hidden">
+              <Image
+                src="/images/geocam-xyz/EdgarCamera.png"
+                alt="GeoCam 360 camera unit"
+                fill
+                className="object-cover"
+                priority
+              />
             </div>
 
             <div>
@@ -87,7 +103,6 @@ export default function ProductPage() {
                 A single device for aerial, streets and indoors. Deploy under UAS, on vehicles, mounted on backpacks, and lower it down in manholes.
               </p>
 
-              {/* Specs */}
               <ul className="space-y-3 mb-8">
                 {specs.map((spec) => (
                   <li key={spec} className="flex items-start gap-3 text-sm">
@@ -97,7 +112,6 @@ export default function ProductPage() {
                 ))}
               </ul>
 
-              {/* Mount options */}
               <div className="grid grid-cols-2 gap-3">
                 {mounts.map((mount) => (
                   <div
@@ -135,8 +149,13 @@ export default function ProductPage() {
               ))}
             </div>
           </div>
-          <div className="bg-white/5 aspect-video rounded-3xl border border-white/10 flex items-center justify-center text-white/20 font-bold italic">
-            [ VPS diagram / animation ]
+          <div className="relative aspect-video rounded-3xl overflow-hidden">
+            <Image
+              src="/images/geocam-xyz/Untitled (5).png"
+              alt="GeoCam Visual Positioning System in action"
+              fill
+              className="object-cover"
+            />
           </div>
         </div>
       </section>
@@ -153,19 +172,24 @@ export default function ProductPage() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {apps.map(({ id, name, tagline, body, badge }) => (
-              <div key={id} className="bg-white p-8 rounded-3xl border border-slate-200 hover:border-blue-200 hover:shadow-md transition-all flex flex-col">
-                <div className="flex items-start justify-between mb-4">
-                  <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest">{id}</span>
-                  {badge && (
-                    <span className="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-[10px] font-black uppercase tracking-widest border border-blue-100">
-                      {badge}
-                    </span>
-                  )}
+            {apps.map(({ id, name, tagline, body, badge, image, imageAlt }) => (
+              <div key={id} className="bg-white rounded-3xl border border-slate-200 hover:border-blue-200 hover:shadow-md transition-all flex flex-col overflow-hidden">
+                <div className="relative aspect-video w-full">
+                  <Image src={image} alt={imageAlt} fill className="object-cover" />
                 </div>
-                <h3 className="text-2xl font-black uppercase mb-2">{name}</h3>
-                <p className="text-xs font-black text-slate-400 uppercase tracking-wide mb-4">{tagline}</p>
-                <p className="text-sm text-slate-500 leading-relaxed flex-1">{body}</p>
+                <div className="p-8 flex flex-col flex-1">
+                  <div className="flex items-start justify-between mb-4">
+                    <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest">{id}</span>
+                    {badge && (
+                      <span className="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-[10px] font-black uppercase tracking-widest border border-blue-100">
+                        {badge}
+                      </span>
+                    )}
+                  </div>
+                  <h3 className="text-2xl font-black uppercase mb-2">{name}</h3>
+                  <p className="text-xs font-black text-slate-400 uppercase tracking-wide mb-4">{tagline}</p>
+                  <p className="text-sm text-slate-500 leading-relaxed flex-1">{body}</p>
+                </div>
               </div>
             ))}
           </div>
