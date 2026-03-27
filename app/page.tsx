@@ -96,19 +96,19 @@ export default function HomePage() {
   return (
     <>
       {/* ── HERO ── */}
-      <section className="bg-gradient-to-b from-slate-50 to-white">
+      <section className="bg-slate-950">
         <div className="max-w-7xl mx-auto px-6 py-24 lg:py-36 text-center">
-          <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-700 px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-widest mb-8 border border-blue-100">
+          <div className="inline-flex items-center gap-2 bg-blue-950 text-blue-400 px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-widest mb-8 border border-blue-900">
             AI-Native Reality Capture · Australian Distributor
           </div>
-          <h1 className="text-5xl lg:text-7xl font-black tracking-tight leading-[1.05] mb-6">
+          <h1 className="text-5xl lg:text-7xl font-black tracking-tight leading-[1.05] mb-6 text-white">
             The first AI-Native<br />
-            <span className="text-blue-600">Reality Capture Platform</span>
+            <span className="text-blue-500">Reality Capture Platform</span>
           </h1>
-          <p className="text-2xl lg:text-3xl text-slate-500 font-semibold mb-10">
+          <p className="text-2xl lg:text-3xl text-slate-400 font-semibold mb-10">
             Aerial, Street, Indoors
           </p>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto mb-6">
+          <p className="text-lg text-slate-400 max-w-2xl mx-auto mb-6">
             GeoCam is the enterprise ready Reality Capture Platform. Our AI-powered Visual Positioning Engine enables rapid mapping at any scale, no LiDAR.
           </p>
           <div className="flex flex-wrap gap-4 justify-center mb-20">
@@ -120,17 +120,17 @@ export default function HomePage() {
             </Link>
             <Link
               href="/contact"
-              className="bg-white text-slate-900 px-8 py-4 rounded-2xl font-black uppercase text-xs tracking-widest border border-slate-200 hover:border-blue-600 transition-all"
+              className="bg-white/10 text-white px-8 py-4 rounded-2xl font-black uppercase text-xs tracking-widest border border-white/20 hover:border-blue-500 transition-all"
             >
               Request Demo
             </Link>
           </div>
-          <div className="relative aspect-video max-w-5xl mx-auto rounded-3xl overflow-hidden border border-slate-200 shadow-xl">
+          <div className="relative aspect-video max-w-5xl mx-auto">
             <Image
               src="/images/geocam-xyz/Design (2).png"
               alt="GeoCam AI-Native Reality Capture Platform"
               fill
-              className="object-cover"
+              className="object-contain"
               priority
             />
           </div>
