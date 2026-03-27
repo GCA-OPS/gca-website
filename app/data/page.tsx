@@ -52,7 +52,7 @@ export default function DataPage() {
       <section className="py-24 px-6 border-b border-slate-200">
         <div className="max-w-7xl mx-auto">
           <p className="text-xs font-black text-blue-600 uppercase tracking-[0.4em] mb-4">Data Services</p>
-          <h1 className="text-5xl lg:text-6xl font-black tracking-tight uppercase italic mb-6">
+          <h1 className="text-5xl lg:text-6xl font-black tracking-tight uppercase mb-6">
             Visual Intelligence.
           </h1>
           <p className="text-xl text-slate-500 max-w-2xl leading-relaxed">

@@ -12,7 +12,7 @@ export default function ContactPage() {
       <section className="bg-slate-50 py-24 px-6 border-b border-slate-200">
         <div className="max-w-4xl mx-auto">
           <p className="text-xs font-black text-blue-600 uppercase tracking-[0.4em] mb-4">Get in Touch</p>
-          <h1 className="text-5xl lg:text-6xl font-black tracking-tight uppercase italic mb-4">
+          <h1 className="text-5xl lg:text-6xl font-black tracking-tight uppercase mb-4">
             Connect.
           </h1>
           <p className="text-xl text-slate-500">
