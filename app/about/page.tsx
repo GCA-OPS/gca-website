@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
@@ -59,8 +60,13 @@ export default function AboutPage() {
               Geocam Australia brings this technology to the Australian market with deep local knowledge of Australian standards, regulations, and the unique operating conditions of our infrastructure environment.
             </p>
           </div>
-          <div className="bg-slate-100 aspect-square rounded-3xl flex items-center justify-center text-slate-300 font-bold italic">
-            [ Team / office image ]
+          <div className="relative aspect-square rounded-3xl overflow-hidden">
+            <Image
+              src="/images/geocam-xyz/image-asset.jpeg"
+              alt="GeoCam team"
+              fill
+              className="object-cover"
+            />
           </div>
         </div>
       </section>

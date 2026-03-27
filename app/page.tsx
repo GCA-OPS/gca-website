@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 
 const industries = [
@@ -72,16 +73,22 @@ const deployMethods = [
     label: 'Drive Streets',
     body: 'Mobile mapping for roads, utilities, and streetscapes with centimetre-level accuracy.',
     badge: 'Vehicle Mount',
+    image: '/images/geocam-xyz/ProcessingStreets.jpg',
+    imageAlt: 'GeoCam vehicle-mounted camera capturing street-level imagery',
   },
   {
     label: 'Walk Properties and Indoors',
     body: 'Portable capture for facilities, campuses, and areas inaccessible to vehicles.',
     badge: 'Backpack',
+    image: '/images/geocam-xyz/photo_2022-04-11_14-30-47.jpg',
+    imageAlt: 'GeoCam backpack unit capturing indoor and property imagery',
   },
   {
     label: 'Capture Aerial Imagery',
     body: 'Drone integration for large-scale projects, terrain mapping, and hard-to-reach areas.',
     badge: 'UAS / Drone',
+    image: '/images/geocam-xyz/Untitled (4).jpg',
+    imageAlt: 'Aerial imagery captured with GeoCam UAS integration',
   },
 ]
 
@@ -118,9 +125,14 @@ export default function HomePage() {
               Request Demo
             </Link>
           </div>
-          {/* Hero image placeholder */}
-          <div className="relative bg-slate-100 aspect-video max-w-5xl mx-auto rounded-3xl border border-slate-200 flex items-center justify-center text-slate-300 font-bold italic text-sm">
-            [ Platform Screenshot — replace with actual asset ]
+          <div className="relative aspect-video max-w-5xl mx-auto rounded-3xl overflow-hidden border border-slate-200 shadow-xl">
+            <Image
+              src="/images/geocam-xyz/Design (2).png"
+              alt="GeoCam AI-Native Reality Capture Platform"
+              fill
+              className="object-cover"
+              priority
+            />
           </div>
         </div>
       </section>
@@ -152,10 +164,10 @@ export default function HomePage() {
             <p className="text-xl text-slate-500">Easy to transition between them and fuse into a single scene.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            {deployMethods.map(({ label, body, badge }) => (
+            {deployMethods.map(({ label, body, badge, image, imageAlt }) => (
               <div key={label} className="bg-white p-8 rounded-3xl border border-slate-200 hover:border-blue-200 hover:shadow-md transition-all">
-                <div className="bg-slate-100 aspect-square rounded-2xl mb-6 flex items-center justify-center text-slate-300 font-bold italic text-sm">
-                  [ {label} image ]
+                <div className="relative aspect-square rounded-2xl mb-6 overflow-hidden">
+                  <Image src={image} alt={imageAlt} fill className="object-cover" />
                 </div>
                 <div className="inline-block px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-[10px] font-black uppercase tracking-widest mb-4 border border-blue-100">
                   {badge}
