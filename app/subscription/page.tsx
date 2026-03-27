@@ -1,44 +1,33 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import PricingCards from '@/components/PricingCards'
 
 export const metadata: Metadata = {
-  title: 'Subscription — GeoCam Australia',
-  description: 'GeoCam Australia subscription pricing. Base annual subscription starting at $10,000 AUD. Camera, VPS credits, user licenses, and storage.',
+  title: 'Pricing — GeoCam Australia',
+  description: 'GeoCam Australia subscription pricing. Try free for 5 days. Starter from $10,000 AUD/year. Professional and Enterprise plans available.',
 }
 
-const cameraTerms = [
-  { term: '1 Month', price: '$5,000', note: 'Month-to-month flexibility' },
-  { term: '1 Year', price: '$15,000', note: 'Most popular commitment', featured: true },
-  { term: '3 Years', price: '$30,000', note: 'Best value, locked rate' },
-]
-
-const streetCredits = [
-  { volume: '< 400 km', annual: '$31 / km', threeYear: '—' },
-  { volume: '400 – 1,600 km', annual: '$25 / km', threeYear: '$22 / km' },
-  { volume: '1,600 – 4,000 km', annual: '$19 / km', threeYear: '$16 / km' },
-  { volume: '4,000 – 8,000 km', annual: '$16 / km', threeYear: '$12 / km' },
-  { volume: '> 8,000 km', annual: '$12 / km', threeYear: '$11 / km' },
-]
-
-const indoorCredits = [
-  { volume: '< 25,000 m²', annual: '$0.22 / m²', threeYear: '—' },
-  { volume: '25,000 – 93,000 m²', annual: '$0.17 / m²', threeYear: '$0.15 / m²' },
-  { volume: '93,000 – 232,000 m²', annual: '$0.13 / m²', threeYear: '$0.11 / m²' },
-  { volume: '> 232,000 m²', annual: '$0.10 / m²', threeYear: '$0.09 / m²' },
-]
-
-const userAccounts = [
-  { role: 'Admin', price: '$2,500', period: 'per year' },
-  { role: 'Editor', price: '$1,500', period: 'per year' },
-  { role: 'QAQC', price: '$3,500', period: 'per year' },
-  { role: 'Viewer (10-pack)', price: '$1,200', period: 'per year' },
-]
-
-const bundles = [
-  'Field Data Services',
-  'GIS / CAD / BIM Data Production',
-  'ML Training and Application',
-  'Training — In-Person, Remote, Asynchronous',
+const faqs = [
+  {
+    q: 'What is included in the 5-day free trial?',
+    a: 'Your trial includes full access to the GeoCam platform — Manager, Viewer, and Editor apps — with a limited VPS credit allocation. No credit card required. At the end of the trial, choose a plan to continue or speak with our Australian team.',
+  },
+  {
+    q: 'How do VPS credits work?',
+    a: 'VPS credits are consumed as your captured imagery is processed through the Visual Positioning Engine. Street capture is measured in kilometres driven; indoor capture is measured in square metres walked. Credits are included in your plan and additional top-ups can be purchased at volume rates.',
+  },
+  {
+    q: 'What is a camera term?',
+    a: 'A camera term is the access period for your GeoCam 360 hardware unit. The Starter plan includes a 1-month term — ideal for trialling the platform. The Professional plan includes a 1-year term for ongoing programs. Enterprise customers can deploy multiple units under a custom arrangement.',
+  },
+  {
+    q: 'Can I add users or upgrade my plan at any time?',
+    a: 'Yes. You can upgrade your plan, purchase additional VPS credits, or add individual user licences (Admin, Editor, QAQC, or Viewer packs) at any time. Contact the Australian team and we will adjust your subscription.',
+  },
+  {
+    q: 'Is all pricing in Australian dollars?',
+    a: 'Yes. All pricing shown is in Australian dollars (AUD) and is exclusive of GST. Enterprise pricing is scoped and quoted on a project-by-project basis by our local team.',
+  },
 ]
 
 export default function SubscriptionPage() {
@@ -46,154 +35,39 @@ export default function SubscriptionPage() {
     <>
       {/* ── PAGE HEADER ── */}
       <section className="bg-slate-50 py-24 px-6 border-b border-slate-200">
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="text-xs font-black text-blue-600 uppercase tracking-[0.4em] mb-4">Commercials</p>
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="text-xs font-black text-blue-600 uppercase tracking-[0.4em] mb-4">Pricing</p>
           <h1 className="text-5xl lg:text-6xl font-black tracking-tight uppercase mb-6">
-            Subscription Hub.
+            Try it free for 5 days.
           </h1>
-          <p className="text-2xl font-black text-slate-900 mb-4">
-            Base Annual Subscription starting at <span className="text-blue-600">$10,000 AUD</span>
-          </p>
-          <p className="text-slate-500 max-w-xl mx-auto">
-            Includes 1 month camera term, 240 km or 23,000 m² indoors of VPS credits, and a bundle of 5 Viewers &amp; 1 Admin. All pricing ex-GST.
+          <p className="text-xl text-slate-500 max-w-xl mx-auto leading-relaxed">
+            No credit card required. Full platform access from day one. Choose a plan when you're ready.
           </p>
         </div>
       </section>
 
-      {/* ── CAMERA TERM ── */}
+      {/* ── PRICING CARDS ── */}
       <section className="py-24 px-6">
-        <div className="max-w-4xl mx-auto">
-          <p className="text-xs font-black text-blue-600 uppercase tracking-[0.4em] mb-3">Deployment</p>
-          <h2 className="text-3xl font-black tracking-tight mb-10">Camera Term</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            {cameraTerms.map(({ term, price, note, featured }) => (
-              <div
-                key={term}
-                className={`p-8 rounded-2xl border-2 ${
-                  featured
-                    ? 'border-blue-600 bg-slate-900 text-white'
-                    : 'border-slate-200 bg-white'
-                }`}
-              >
-                {featured && (
-                  <div className="text-[10px] font-black text-blue-400 uppercase tracking-widest mb-4">
-                    Most Popular
-                  </div>
-                )}
-                <div className={`text-[10px] font-black uppercase tracking-widest mb-3 ${featured ? 'text-slate-500' : 'text-slate-400'}`}>
-                  Commitment
-                </div>
-                <div className="text-2xl font-black mb-1">{term}</div>
-                <div className={`text-3xl font-black text-blue-600 mb-2`}>{price}</div>
-                <div className={`text-xs ${featured ? 'text-slate-400' : 'text-slate-500'}`}>{note}</div>
-              </div>
-            ))}
-          </div>
+        <div className="max-w-6xl mx-auto">
+          <PricingCards />
+          <p className="text-center text-xs text-slate-400 mt-8">
+            All pricing in AUD, ex-GST. Volume VPS credit top-ups available at any time.
+          </p>
         </div>
       </section>
 
-      {/* ── VPS CREDITS ── */}
+      {/* ── FAQ ── */}
       <section className="bg-slate-50 py-24 px-6">
-        <div className="max-w-5xl mx-auto">
-          <p className="text-xs font-black text-blue-600 uppercase tracking-[0.4em] mb-3">Usage</p>
-          <h2 className="text-3xl font-black tracking-tight mb-3">VPS Credits</h2>
-          <p className="text-slate-500 mb-12">Pay per kilometre (or square metre) processed. Volume discounts available for annual and 3-year commitments.</p>
-
-          <div className="grid lg:grid-cols-2 gap-8">
-            {/* Street */}
-            <div>
-              <h3 className="text-lg font-black uppercase mb-4">Street Imaging</h3>
-              <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden">
-                <div className="grid grid-cols-3 bg-slate-900 text-white text-[10px] font-black uppercase tracking-widest px-6 py-3">
-                  <div>Volume</div>
-                  <div>Annual</div>
-                  <div>3-Year</div>
-                </div>
-                {streetCredits.map(({ volume, annual, threeYear }, i) => (
-                  <div
-                    key={volume}
-                    className={`grid grid-cols-3 px-6 py-4 text-sm border-t border-slate-100 ${i % 2 === 0 ? 'bg-white' : 'bg-slate-50'}`}
-                  >
-                    <div className="font-medium text-slate-700">{volume}</div>
-                    <div className="font-black text-blue-600">{annual}</div>
-                    <div className="text-slate-500">{threeYear}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Indoor */}
-            <div>
-              <h3 className="text-lg font-black uppercase mb-4">Indoor Imaging</h3>
-              <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden">
-                <div className="grid grid-cols-3 bg-slate-900 text-white text-[10px] font-black uppercase tracking-widest px-6 py-3">
-                  <div>Volume</div>
-                  <div>Annual</div>
-                  <div>3-Year</div>
-                </div>
-                {indoorCredits.map(({ volume, annual, threeYear }, i) => (
-                  <div
-                    key={volume}
-                    className={`grid grid-cols-3 px-6 py-4 text-sm border-t border-slate-100 ${i % 2 === 0 ? 'bg-white' : 'bg-slate-50'}`}
-                  >
-                    <div className="font-medium text-slate-700">{volume}</div>
-                    <div className="font-black text-blue-600">{annual}</div>
-                    <div className="text-slate-500">{threeYear}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-14">
+            <p className="text-xs font-black text-blue-600 uppercase tracking-[0.4em] mb-4">FAQ</p>
+            <h2 className="text-4xl font-black tracking-tight">Common questions.</h2>
           </div>
-
-          <p className="text-xs text-slate-400 mt-6">
-            Approximately 320 km of capture or 55,700 m² per TB of storage consumed.
-          </p>
-        </div>
-      </section>
-
-      {/* ── USER ACCOUNTS ── */}
-      <section className="py-24 px-6">
-        <div className="max-w-4xl mx-auto">
-          <p className="text-xs font-black text-blue-600 uppercase tracking-[0.4em] mb-3">Access</p>
-          <h2 className="text-3xl font-black tracking-tight mb-10">App User Accounts</h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {userAccounts.map(({ role, price, period }) => (
-              <div key={role} className="p-6 border border-slate-200 rounded-2xl bg-white">
-                <div className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-3">Role</div>
-                <div className="text-xl font-black mb-1">{role}</div>
-                <div className="text-2xl font-black text-blue-600">{price}</div>
-                <div className="text-xs text-slate-500 mt-1">{period}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── STORAGE ── */}
-      <section className="bg-slate-50 py-16 px-6">
-        <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 bg-white rounded-3xl border border-slate-200 p-10">
-          <div>
-            <p className="text-xs font-black text-blue-600 uppercase tracking-[0.4em] mb-2">Storage</p>
-            <h2 className="text-2xl font-black tracking-tight">Beyond the base subscription</h2>
-            <p className="text-slate-500 mt-2">Storage is included up to the base allocation. Additional capacity billed monthly.</p>
-          </div>
-          <div className="text-center shrink-0">
-            <div className="text-4xl font-black text-blue-600">$20</div>
-            <div className="text-sm font-black text-slate-500 uppercase tracking-widest">per TB / Month</div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── SERVICE BUNDLES ── */}
-      <section className="py-24 px-6">
-        <div className="max-w-4xl mx-auto">
-          <p className="text-xs font-black text-blue-600 uppercase tracking-[0.4em] mb-3">Add-Ons</p>
-          <h2 className="text-3xl font-black tracking-tight mb-10">Service Bundles</h2>
-          <div className="grid sm:grid-cols-2 gap-4">
-            {bundles.map((bundle) => (
-              <div key={bundle} className="flex items-center gap-4 p-6 border border-slate-200 rounded-2xl bg-white">
-                <div className="w-2 h-2 bg-blue-600 rounded-full shrink-0" />
-                <span className="font-bold text-slate-700">{bundle}</span>
+          <div className="space-y-4">
+            {faqs.map(({ q, a }) => (
+              <div key={q} className="bg-white rounded-2xl border border-slate-200 p-8">
+                <h3 className="text-base font-black mb-3">{q}</h3>
+                <p className="text-sm text-slate-500 leading-relaxed">{a}</p>
               </div>
             ))}
           </div>
@@ -202,9 +76,11 @@ export default function SubscriptionPage() {
 
       {/* ── CTA ── */}
       <section className="bg-slate-900 text-white py-20 px-6 text-center">
-        <p className="text-xs font-black text-blue-400 uppercase tracking-[0.4em] mb-4">All pricing in AUD (ex-GST)</p>
+        <p className="text-xs font-black text-blue-400 uppercase tracking-[0.4em] mb-4">Get Started</p>
         <h2 className="text-3xl font-black tracking-tight mb-4">Ready to discuss a subscription?</h2>
-        <p className="text-slate-400 mb-8">We&apos;ll put together a quote tailored to your capture volumes and team size.</p>
+        <p className="text-slate-400 mb-8 max-w-md mx-auto">
+          We'll put together a quote tailored to your capture volumes and team size.
+        </p>
         <Link
           href="/contact"
           className="inline-block bg-blue-600 text-white px-8 py-4 rounded-2xl font-black uppercase text-xs tracking-widest hover:bg-blue-500 hover:shadow-xl transition-all"
