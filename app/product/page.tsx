@@ -13,7 +13,7 @@ const specs = [
   'Integrated Solid State Storage',
   'Onboard NVIDIA GPU for ML Privacy Filters',
   'External TSA Approved Battery',
-  'Operate @ 75 MPH on Highways + 5 FPS Indoors',
+  'Operate @ 120 km/h on Highways + 5 FPS Indoors',
 ]
 
 const mounts = ['Vehicle Mount', 'Backpack', 'Monopole', 'Indoor / Manhole']

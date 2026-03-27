@@ -13,18 +13,18 @@ const cameraTerms = [
 ]
 
 const streetCredits = [
-  { volume: '< 250 miles', annual: '$50 / mile', threeYear: '—' },
-  { volume: '250 – 999 miles', annual: '$40 / mile', threeYear: '$35 / mile' },
-  { volume: '1,000 – 2,499 miles', annual: '$30 / mile', threeYear: '$25 / mile' },
-  { volume: '2,500 – 4,999 miles', annual: '$25 / mile', threeYear: '$20 / mile' },
-  { volume: '> 5,000 miles', annual: '$20 / mile', threeYear: '$18 / mile' },
+  { volume: '< 400 km', annual: '$31 / km', threeYear: '—' },
+  { volume: '400 – 1,600 km', annual: '$25 / km', threeYear: '$22 / km' },
+  { volume: '1,600 – 4,000 km', annual: '$19 / km', threeYear: '$16 / km' },
+  { volume: '4,000 – 8,000 km', annual: '$16 / km', threeYear: '$12 / km' },
+  { volume: '> 8,000 km', annual: '$12 / km', threeYear: '$11 / km' },
 ]
 
 const indoorCredits = [
-  { volume: '< 250k sqft', annual: '$0.020 / sqft', threeYear: '—' },
-  { volume: '250k – 999k sqft', annual: '$0.016 / sqft', threeYear: '$0.014 / sqft' },
-  { volume: '1M – 2.49M sqft', annual: '$0.012 / sqft', threeYear: '$0.010 / sqft' },
-  { volume: '> 2.5M sqft', annual: '$0.009 / sqft', threeYear: '$0.008 / sqft' },
+  { volume: '< 25,000 m²', annual: '$0.22 / m²', threeYear: '—' },
+  { volume: '25,000 – 93,000 m²', annual: '$0.17 / m²', threeYear: '$0.15 / m²' },
+  { volume: '93,000 – 232,000 m²', annual: '$0.13 / m²', threeYear: '$0.11 / m²' },
+  { volume: '> 232,000 m²', annual: '$0.10 / m²', threeYear: '$0.09 / m²' },
 ]
 
 const userAccounts = [
@@ -55,7 +55,7 @@ export default function SubscriptionPage() {
             Base Annual Subscription starting at <span className="text-blue-600">$10,000 AUD</span>
           </p>
           <p className="text-slate-500 max-w-xl mx-auto">
-            Includes 1 month camera term, 150 miles or 250,000 sqft indoors of VPS credits, and a bundle of 5 Viewers &amp; 1 Admin. All pricing ex-GST.
+            Includes 1 month camera term, 240 km or 23,000 m² indoors of VPS credits, and a bundle of 5 Viewers &amp; 1 Admin. All pricing ex-GST.
           </p>
         </div>
       </section>
@@ -97,7 +97,7 @@ export default function SubscriptionPage() {
         <div className="max-w-5xl mx-auto">
           <p className="text-xs font-black text-blue-600 uppercase tracking-[0.4em] mb-3">Usage</p>
           <h2 className="text-3xl font-black tracking-tight mb-3">VPS Credits</h2>
-          <p className="text-slate-500 mb-12">Pay per kilometre (or square foot) processed. Volume discounts available for annual and 3-year commitments.</p>
+          <p className="text-slate-500 mb-12">Pay per kilometre (or square metre) processed. Volume discounts available for annual and 3-year commitments.</p>
 
           <div className="grid lg:grid-cols-2 gap-8">
             {/* Street */}
@@ -146,7 +146,7 @@ export default function SubscriptionPage() {
           </div>
 
           <p className="text-xs text-slate-400 mt-6">
-            Approximately 200 miles of capture or 600,000 sqft per TB of storage consumed.
+            Approximately 320 km of capture or 55,700 m² per TB of storage consumed.
           </p>
         </div>
       </section>
