@@ -22,6 +22,10 @@ const industries = [
     title: 'Construction As Built Models',
     body: 'Continually scan the build process enabling True As Builds, updating designs and creating a super vision.',
   },
+  {
+    title: 'Dilapidation Surveys',
+    body: 'Capture accurate pre and post-construction condition reports with georeferenced imagery. Reduce disputes and protect your business with defensible visual records.',
+  },
 ]
 
 const events = [
