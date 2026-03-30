@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Subscriptions — GeoCam Australia',
+  title: 'Subscriptions, GeoCam Australia',
   description: 'Annual Hardware as a Service subscriptions for GeoCam Australia. Talk to us about camera terms, VPS credits, storage, and app users.',
 }
 
@@ -12,7 +12,7 @@ const details = [
   },
   {
     heading: 'Storage',
-    body: 'Included — you can collect more than you process.',
+    body: 'Included, you can collect more than you process.',
   },
   {
     heading: 'VPS Credits',
@@ -32,10 +32,10 @@ export default function SubscriptionPage() {
       <div className="max-w-5xl mx-auto">
         <p className="text-xs font-black text-blue-400 uppercase tracking-[0.4em] mb-6">Managed Service</p>
         <h2 className="text-4xl lg:text-5xl font-black tracking-tight leading-tight mb-6 max-w-2xl">
-          GeoCam capability.<br />GCA delivered.
+          GeoCam capability.<br />GeoCam Australia delivered.
         </h2>
         <p className="text-slate-400 text-lg leading-relaxed max-w-xl mb-8">
-          We're not handing you keys just yet — we're operating the platform on your behalf. Same data. Same intelligence. Zero internal overhead.
+          We're not handing you keys just yet, we're operating the platform on your behalf. Same data. Same intelligence. Zero internal overhead.
         </p>
         <p className="text-xs font-black text-blue-400 uppercase tracking-widest">
           Subscriptions coming soon.

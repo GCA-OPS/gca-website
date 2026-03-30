@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Data Services — GeoCam Australia',
+  title: 'Data Services, GeoCam Australia',
   description: 'Build your own map data with GeoCam. Reality capture, feature extraction, CAD and GIS data production for Australian infrastructure.',
 }
 
@@ -78,7 +78,7 @@ export default function DataPage() {
               <span className="text-xs font-black text-blue-600 uppercase tracking-widest">3.1 Reality Capture</span>
               <h2 className="text-3xl font-black mt-2 mb-4 uppercase">Imagery as a Service</h2>
               <p className="text-slate-600 leading-relaxed mb-6">
-                Complete reality capture delivered as a managed service. Includes 3D Textured Meshes, Point Clouds, and Orthorenders — all optimised for Australian coordinate systems and standards.
+                Complete reality capture delivered as a managed service. Includes 3D Textured Meshes, Point Clouds, and Orthorenders, all optimised for Australian coordinate systems and standards.
               </p>
               <div className="flex flex-wrap gap-3">
                 <span className="px-4 py-2 bg-blue-50 text-blue-700 rounded-full text-[10px] font-black uppercase tracking-widest border border-blue-100">
@@ -108,7 +108,7 @@ export default function DataPage() {
               <span className="text-xs font-black text-blue-400 uppercase tracking-widest">3.2 Map Production</span>
               <h2 className="text-3xl font-black mt-2 mb-4 uppercase">CAD &amp; GIS Data</h2>
               <p className="text-slate-400 leading-relaxed mb-6">
-                We offer data services — custom Map and CAD data production at almost any Level of Detail (LOD). Turning raw imagery into precise vector data for Councils, Utilities, and Construction projects.
+                We offer data services, custom Map and CAD data production at almost any Level of Detail (LOD). Turning raw imagery into precise vector data for Councils, Utilities, and Construction projects.
               </p>
               <div className="flex flex-wrap gap-3">
                 <span className="px-4 py-2 bg-white/10 text-white/70 rounded-full text-[10px] font-black uppercase tracking-widest">
@@ -147,7 +147,7 @@ export default function DataPage() {
           <div className="relative aspect-video rounded-3xl overflow-hidden border border-slate-200 shadow-sm">
             <Image
               src="/images/geocam-xyz/Screenshot 2024-07-09 205153.png"
-              alt="GeoCam Editor — single-click feature creation from 360° imagery"
+              alt="GeoCam Editor, single-click feature creation from 360° imagery"
               fill
               className="object-cover"
             />

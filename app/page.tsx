@@ -116,7 +116,7 @@ export default function HomePage() {
               Full GeoCam capability. Fully managed by us.
             </h2>
             <p className="text-slate-400 leading-relaxed">
-              GCA currently operates as a turnkey capture service — we deploy, capture, and deliver. No hardware for you to manage. Subscription tiers are on the horizon; if your procurement cycle is already ticking, let's talk now.
+              GeoCam Australia currently operates as a turnkey capture service, we deploy, capture, and deliver. No hardware for you to manage. Subscription tiers are on the horizon; if your procurement cycle is already ticking, let's talk now.
             </p>
           </div>
 

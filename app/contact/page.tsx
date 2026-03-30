@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Contact — GeoCam Australia',
+  title: 'Contact, GeoCam Australia',
   description: 'Get in touch with the GeoCam Australia team. Enquire about hardware, data services, subscriptions, or demos.',
 }
 

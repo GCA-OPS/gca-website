@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'About — GeoCam Australia',
+  title: 'About, GeoCam Australia',
   description: 'Official Australian distributor of GeoCam hardware and exclusive Data-as-a-Service provider for the region. Based in Melbourne, VIC.',
 }
 
@@ -76,7 +76,7 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto">
           <p className="text-xs font-black text-blue-400 uppercase tracking-[0.4em] mb-6">Mission</p>
           <blockquote className="text-2xl lg:text-3xl font-black leading-tight mb-8 tracking-tight">
-            &ldquo;The world is changing rapidly — urban growth and environmental shifts are putting pressure on the organisations that manage critical infrastructure. Our mission is to help these organisations create accurate, current Geospatial Digital Twin data to support better decision-making, smarter designs, and predictive modelling.&rdquo;
+            &ldquo;The world is changing rapidly, urban growth and environmental shifts are putting pressure on the organisations that manage critical infrastructure. Our mission is to help these organisations create accurate, current Geospatial Digital Twin data to support better decision-making, smarter designs, and predictive modelling.&rdquo;
           </blockquote>
           <p className="text-slate-400">
             We combine GeoCam&apos;s cutting-edge AI-powered platform with deep local knowledge of Australian standards to bring this mission to life across infrastructure, utilities, and government sectors.
@@ -93,7 +93,7 @@ export default function AboutPage() {
             Our vision is to democratise access to low-cost, high-accuracy cameras that create geospatial intelligence and maps at unprecedented temporal scales. Where mapping used to be a one-time project, GeoCam makes it a continuous process.
           </p>
           <p className="text-slate-600 leading-relaxed">
-            For Australian Councils, utilities, and government agencies — this means always-current digital twins, faster decision-making, and predictive asset management built on real-world data.
+            For Australian Councils, utilities, and government agencies, this means always-current digital twins, faster decision-making, and predictive asset management built on real-world data.
           </p>
         </div>
       </section>

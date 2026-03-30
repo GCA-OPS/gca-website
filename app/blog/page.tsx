@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Blog — GeoCam Australia',
+  title: 'Blog, GeoCam Australia',
   description: 'News, insights, and updates from GeoCam Australia. Reality capture, GIS, Australian infrastructure.',
 }
 

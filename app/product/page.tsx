@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Product — GeoCam Australia',
+  title: 'Product, GeoCam Australia',
   description: 'GeoCam 360 hardware, Visual Positioning System, and the full suite of applications: Manager, Editor, QAQC, Viewer, and PII.',
 }
 
@@ -23,10 +23,10 @@ const apps = [
     id: '2.2',
     name: 'Manager',
     tagline: 'Create and Manage Reality Capture Projects',
-    body: 'Organisational setup, project management, data management, processing capabilities, and workflow configuration — all in one cloud dashboard.',
+    body: 'Organisational setup, project management, data management, processing capabilities, and workflow configuration, all in one cloud dashboard.',
     badge: null,
     image: '/images/geocam-xyz/Untitled (4).png',
-    imageAlt: 'GeoCam Manager — project management dashboard',
+    imageAlt: 'GeoCam Manager, project management dashboard',
   },
   {
     id: '2.3',
@@ -35,7 +35,7 @@ const apps = [
     body: 'Web streaming, direct ArcGIS Feature Service integration, rapid data creation, accuracy refinement, and smart symbol selection.',
     badge: 'ArcGIS Integration',
     image: '/images/geocam-xyz/Untitled (6).png',
-    imageAlt: 'GeoCam Editor — feature creation from 360° imagery',
+    imageAlt: 'GeoCam Editor, feature creation from 360° imagery',
   },
   {
     id: '2.4',
@@ -44,7 +44,7 @@ const apps = [
     body: 'Rapid review, enhanced efficiency, accuracy checks, and quick correction tools. Automated validation against Australian standards.',
     badge: null,
     image: '/images/geocam-xyz/Untitled (12).png',
-    imageAlt: 'GeoCam QAQC — quality assurance interface',
+    imageAlt: 'GeoCam QAQC, quality assurance interface',
   },
   {
     id: '2.5',
@@ -53,7 +53,7 @@ const apps = [
     body: 'Precise navigation, feature search, Lock View tool, and collaboration features. Share immersive 360° views with clients and stakeholders.',
     badge: null,
     image: '/images/geocam-xyz/Picture6.png',
-    imageAlt: 'GeoCam Viewer — imagery and GIS data exploration',
+    imageAlt: 'GeoCam Viewer, imagery and GIS data exploration',
   },
   {
     id: '2.6',
@@ -62,7 +62,7 @@ const apps = [
     body: 'Automatically blur vehicles and people across all captured imagery. Comprehensive coverage, flexible deployment, and customisable solutions.',
     badge: 'ML Powered',
     image: '/images/geocam-xyz/Pii image.png',
-    imageAlt: 'GeoCam PII — ML-powered privacy blurring of vehicles and people',
+    imageAlt: 'GeoCam PII, ML-powered privacy blurring of vehicles and people',
   },
 ]
 
