@@ -4,7 +4,7 @@ import PricingCards from '@/components/PricingCards'
 
 export const metadata: Metadata = {
   title: 'Pricing — GeoCam Australia',
-  description: 'GeoCam Australia subscription pricing. Try free for 5 days. Starter from $10,000 AUD/year. Professional and Enterprise plans available.',
+  description: 'GeoCam Australia subscription pricing. Try free for 5 days. Professional and Enterprise plans available.',
 }
 
 const faqs = [
@@ -18,7 +18,7 @@ const faqs = [
   },
   {
     q: 'What is a camera term?',
-    a: 'A camera term is the access period for your GeoCam 360 hardware unit. The Starter plan includes a 1-month term — ideal for trialling the platform. The Professional plan includes a 1-year term for ongoing programs. Enterprise customers can deploy multiple units under a custom arrangement.',
+    a: 'A camera term is the access period for your GeoCam 360 hardware unit. The Professional plan includes a 1-year term for ongoing programs. Enterprise customers can deploy multiple units under a custom arrangement.',
   },
   {
     q: 'Can I add users or upgrade my plan at any time?',

@@ -6,26 +6,6 @@ type Billing = 'annual' | 'monthly'
 
 const plans = [
   {
-    id: 'starter',
-    name: 'Starter',
-    tagline: 'For councils and small teams getting started with reality capture.',
-    price: { annual: '$833', monthly: '$1,000' },
-    billingNote: { annual: 'Billed $10,000 / year', monthly: 'Billed monthly, no lock-in' },
-    features: [
-      '1-month camera term',
-      '240 km street VPS credits',
-      '23,000 m² indoor VPS credits',
-      '5 Viewer accounts',
-      '1 Admin account',
-      'Manager & Viewer apps',
-      'GDA2020 compliant outputs',
-      'Email support',
-    ],
-    cta: 'Start Free Trial',
-    ctaHref: '/contact',
-    featured: false,
-  },
-  {
     id: 'professional',
     name: 'Professional',
     tagline: 'For utilities and infrastructure teams running ongoing capture programs.',
@@ -127,7 +107,7 @@ export default function PricingCards() {
       </div>
 
       {/* Cards */}
-      <div className="grid lg:grid-cols-3 gap-6 items-center">
+      <div className="grid lg:grid-cols-2 gap-6 items-center max-w-4xl mx-auto">
         {plans.map((plan) => (
           <div
             key={plan.id}
