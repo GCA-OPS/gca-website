@@ -127,7 +127,7 @@ export default function HomePage() {
           {/* Vimeo embed */}
           <div className="relative aspect-video max-w-5xl mx-auto mb-10 rounded-2xl overflow-hidden">
             <iframe
-              src="https://player.vimeo.com/video/1091883087?title=0&byline=0&portrait=0"
+              src="https://player.vimeo.com/video/1091883087?autoplay=1&muted=1&loop=1&title=0&byline=0&portrait=0"
               allow="autoplay; fullscreen; picture-in-picture"
               allowFullScreen
               className="absolute inset-0 w-full h-full"
