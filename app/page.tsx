@@ -109,6 +109,17 @@ export default function HomePage() {
             Aerial, Street, Indoors
           </p>
 
+          {/* Managed service statement */}
+          <div className="max-w-2xl mx-auto mb-10 text-center">
+            <p className="text-xs font-black text-blue-400 uppercase tracking-[0.4em] mb-4">Managed Service</p>
+            <h2 className="text-2xl lg:text-3xl font-black tracking-tight text-white mb-4">
+              Full GeoCam capability. Fully managed by us.
+            </h2>
+            <p className="text-slate-400 leading-relaxed">
+              GCA currently operates as a turnkey capture service — we deploy, capture, and deliver. No hardware for you to manage. Subscription tiers are on the horizon; if your procurement cycle is already ticking, let's talk now.
+            </p>
+          </div>
+
           {/* Vimeo embed */}
           <div className="relative aspect-video max-w-5xl mx-auto mb-10 rounded-2xl overflow-hidden">
             <iframe
