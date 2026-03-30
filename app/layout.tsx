@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter, DM_Sans, DM_Serif_Display } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import './globals.css'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
@@ -7,18 +7,6 @@ import Footer from '@/components/Footer'
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
-})
-
-const dmSans = DM_Sans({
-  subsets: ['latin'],
-  variable: '--font-dm-sans',
-})
-
-const dmSerifDisplay = DM_Serif_Display({
-  subsets: ['latin'],
-  weight: '400',
-  style: ['normal', 'italic'],
-  variable: '--font-dm-serif-display',
 })
 
 export const metadata: Metadata = {
@@ -37,7 +25,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en-AU">
-      <body className={`${inter.variable} ${dmSans.variable} ${dmSerifDisplay.variable} font-sans bg-white text-slate-900 antialiased min-h-screen`}>
+      <body className={`${inter.variable} font-sans bg-white text-slate-900 antialiased min-h-screen`}>
         <Nav />
         <main>{children}</main>
         <Footer />
