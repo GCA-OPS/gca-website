@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Facilities & Property Assessments, GeoCam Australia',
@@ -60,10 +59,6 @@ const steps = [
   { num: '04', title: 'Deliver', body: 'Receive your geo-linked PCA or FCA report, map-ready GIS data, and condition dashboard ready for stakeholder review.' },
 ]
 
-const caseStudies = [
-  'Municipal Asset Portfolio, Victorian Local Government',
-  'Commercial Estate FCA, Brisbane CBD',
-]
 
 function XIcon() {
   return (
@@ -198,44 +193,6 @@ export default function FacilitiesPropertyAssessmentsPage() {
         </div>
       </section>
 
-      {/* ── CASE STUDIES CTA ── */}
-      <section className="bg-slate-950 text-white py-24 px-6">
-        <div className="max-w-5xl mx-auto">
-          <p className="text-xs font-black text-blue-400 uppercase tracking-[0.4em] mb-4">Case Studies</p>
-          <h2 className="text-3xl font-black tracking-tight mb-4">
-            See it working in the real world
-          </h2>
-          <p className="text-slate-400 max-w-xl leading-relaxed mb-12">
-            Read how Australian property managers and facility operators have cut assessment costs and eliminated return visits using GeoCam.
-          </p>
-
-          <div className="border-t border-white/10 mb-10">
-            {caseStudies.map((study) => (
-              <a
-                key={study}
-                href="#"
-                className="flex items-center justify-between py-5 border-b border-white/10 group"
-              >
-                <span className="text-sm font-black group-hover:text-blue-400 transition-colors">{study}</span>
-                <span className="text-[10px] font-black text-blue-400 uppercase tracking-widest border border-blue-400/30 px-3 py-1.5 rounded-full shrink-0 ml-4 group-hover:border-blue-400 transition-colors">
-                  Case Study
-                </span>
-              </a>
-            ))}
-            <a href="#" className="flex items-center justify-between py-5 border-b border-white/10 group">
-              <span className="text-sm font-black text-slate-400 group-hover:text-white transition-colors">All Case Studies</span>
-              <span className="text-[10px] font-black text-blue-400 uppercase tracking-widest">View All →</span>
-            </a>
-          </div>
-
-          <Link
-            href="/contact"
-            className="inline-block bg-blue-600 text-white px-8 py-4 rounded-2xl font-black uppercase text-xs tracking-widest hover:bg-blue-500 hover:shadow-xl transition-all"
-          >
-            Talk to us about your project
-          </Link>
-        </div>
-      </section>
     </>
   )
 }
