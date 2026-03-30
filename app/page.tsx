@@ -108,6 +108,17 @@ export default function HomePage() {
           <p className="text-2xl lg:text-3xl text-slate-400 font-semibold mb-10">
             Aerial, Street, Indoors
           </p>
+
+          {/* Vimeo embed */}
+          <div className="relative aspect-video max-w-5xl mx-auto mb-10 rounded-2xl overflow-hidden">
+            <iframe
+              src="https://player.vimeo.com/video/1091883087?title=0&byline=0&portrait=0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowFullScreen
+              className="absolute inset-0 w-full h-full"
+            />
+          </div>
+
           <p className="text-lg text-slate-400 max-w-2xl mx-auto mb-6">
             GeoCam is the enterprise ready Reality Capture Platform. Our AI-powered Visual Positioning Engine enables rapid mapping at any scale, no LiDAR.
           </p>
