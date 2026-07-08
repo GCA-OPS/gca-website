@@ -30,7 +30,6 @@ export default function Nav() {
           </span>
           <span className="hidden md:block">ISO 9001 FRAMEWORK READY</span>
         </div>
-        <div>ABN: 78 166 182 227</div>
       </div>
 
       {/* Main navigation */}
