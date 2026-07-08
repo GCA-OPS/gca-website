@@ -12,10 +12,6 @@ const standards = [
     name: 'GDA2020',
     body: 'All positioning data compliant with Geocentric Datum of Australia 2020. The current national standard for spatial data.',
   },
-  {
-    name: 'ISO 9001 Ready',
-    body: 'Quality management systems framework for enterprise deployments across Australian government and infrastructure sectors.',
-  },
 ]
 
 const offices = [
