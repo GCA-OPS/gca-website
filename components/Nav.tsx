@@ -28,7 +28,6 @@ export default function Nav() {
             <span className="w-1.5 h-1.5 bg-blue-500 rounded-full animate-pulse" />
             GCA-SYSTEMS-V1
           </span>
-          <span className="hidden md:block">ISO 9001 FRAMEWORK READY</span>
         </div>
       </div>
 
