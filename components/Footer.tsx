@@ -40,9 +40,6 @@ export default function Footer() {
             © 2025 Geocam Australia Pty Ltd
           </div>
           <div className="text-[10px] font-black uppercase tracking-widest text-slate-400">
-            ABN: 78 166 182 227
-          </div>
-          <div className="text-[10px] font-black uppercase tracking-widest text-slate-400">
             <Link href="mailto:admin@geocam.com.au" className="hover:text-blue-600 transition-colors">
               admin@geocam.com.au
             </Link>
